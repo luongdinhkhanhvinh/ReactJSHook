@@ -1,4 +1,6 @@
 export interface Props {
     initialUserName: string;
-    onNameUpdated: (newName: string) => any;
+    editingName:string;
+    onNameUpdated:()=>any;
+    onEditingNameUpdated:(newEditingName:string)=>any;
   }
