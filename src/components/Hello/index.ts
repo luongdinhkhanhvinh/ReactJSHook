@@ -1,1 +1,1 @@
-export * from './HelloComponent';
+export * from './hello';

@@ -1,18 +1,18 @@
 import * as React from "react";
-import { HelloComponent } from "./components/Hello";
-import { NameEdit } from "./components/Edit";
+import { HelloComponent } from "./components/hello/hello";
+import { NameEditComponent } from "./components/edit/nameEdit";
 
 export const App = () => {
-  const [name, setName] = React.useState("initialName");
+  const [name, setName] = React.useState("default UserName");
 
-  const setUsernameState = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setName(event.target.value);
+  const setUsernameState = (newName : string) => {
+    setName(newName);
   };
 
   return (
     <>
       <HelloComponent userName={name} />
-      <NameEdit userName={name} onChange={setUsernameState} />
+      <NameEditComponent initialUserName={name} onNameUpdated={setUsernameState} />
     </>
   );
 };

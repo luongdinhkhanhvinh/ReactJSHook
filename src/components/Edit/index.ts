@@ -1,1 +1,1 @@
-export * from './Nameedit';
+export * from './nameEdit';

@@ -1,3 +1,3 @@
-export interface IProps{
-    userName:string;
-}
+export interface Props {
+    userName: string;
+  }
